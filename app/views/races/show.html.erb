@@ -1,0 +1,60 @@
+<% content_for :functional_nav do%>
+	<li><%= link_to 'Add', new_race_path %></li>	
+	<li><%= link_to 'Edit', edit_race_path(@race) %></li>
+	<li><%= link_to 'Back', races_path %></li>
+<% end %>
+<%= currently_at 'Races'%>
+<p>
+  <b>Country:</b>
+  <%= @race.country %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @race.city %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @race.name %>
+</p>
+
+<p>
+  <b>From date:</b>
+  <%= @race.from_date %>
+</p>
+
+<p>
+  <b>To date:</b>
+  <%= @race.to_date %>
+</p>
+
+<p>
+  <b>Circuit:</b>
+  <%= @race.circuit %>
+</p>
+
+<p>
+  <b>Laps:</b>
+  <%= @race.laps %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= '%.3f' % @race.length %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%= '%.3f' % @race.distance %>
+</p>
+
+<p>
+
+
+      <%= image_tag @race.image_url.to_s %>
+      <div class="name"><%= @race.name %></div>
+
+</p>
+
+

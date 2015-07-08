@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  number: 1
+  first_name: MyString
+  last_name: MyString
+  abbreviation: MyString
+  birthdate: 2013-03-17
+  nationality: MyString
+  team_id: 1
+  points: 1
+  image: MyString
+
+two:
+  number: 1
+  first_name: MyString
+  last_name: MyString
+  abbreviation: MyString
+  birthdate: 2013-03-17
+  nationality: MyString
+  team_id: 1
+  points: 1
+  image: MyString

@@ -1,0 +1,41 @@
+<% content_for :functional_nav do%>
+	<li><%= link_to 'Add', new_race_path %></li>	
+<% end %>
+<%= currently_at 'Races'%>
+
+<h1>Listing races</h1>
+<table id="races">
+<thead>	
+  <tr>
+    <th>Country</th>
+    <th>City</th>
+    <th>Name</th>
+    <th>From date</th>
+    <th>To date</th>
+    <th>Circuit</th>
+    <th>Laps</th>
+    <th>Length</th>
+    <th>Distance</th>
+
+  </tr>
+</thead>
+<tbody>
+<% @races.each do |race| %>
+  <tr>
+    <td><%= link_to(race.country, race) %></td>
+    <td><%= race.city %></td>
+    <td><%= race.name %></td>
+    <td><%= race.from_date %></td>
+    <td><%= race.to_date %></td>
+    <td><%= race.circuit %></td>
+    <td><%= race.laps %></td>
+    <td><%= '%.3f' % race.length %></td>
+    <td><%= '%.3f' % race.distance %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+
+
+

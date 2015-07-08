@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  full_name: MyString
+  base: MyString
+  country: MyString
+  team_principal: MyString
+  technical_chief: MyString
+  chassis: MyString
+  engine: MyString
+  image: MyString
+
+two:
+  name: MyString
+  full_name: MyString
+  base: MyString
+  country: MyString
+  team_principal: MyString
+  technical_chief: MyString
+  chassis: MyString
+  engine: MyString
+  image: MyString

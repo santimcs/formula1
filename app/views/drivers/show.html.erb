@@ -1,0 +1,51 @@
+<% content_for :functional_nav do%>
+<li><%= link_to 'Add', new_driver_path %></li>
+<li><%= link_to 'Edit', edit_driver_path(@driver) %></li>
+<li><%= link_to 'Back', drivers_path %></li>
+<% end %>
+<%= currently_at 'Drivers'%>
+
+
+<p>
+  <b>Number:</b>
+  <%= @driver.number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @driver.first_name + ' ' + @driver.last_name %>
+</p>
+<p>
+  <b>Abbreviation:</b>
+  <%= @driver.abbreviation  %>
+</p>
+<p>
+  <b>Birthdate:</b>
+  <%= @driver.birthdate %>
+</p>
+<p>
+  <b>Age:</b>
+<%= BirthdateToAge(@driver.birthdate) %>
+</p>
+<p>
+  <b>Nationality:</b>
+  <%= @driver.nationality %>
+</p>
+<p>
+  <b>Team:</b>
+  <%= @driver.team.full_name %>
+</p>
+<p>
+  <b>Points:</b>
+  <%= @driver.points %>
+</p>
+<p>
+
+
+      <%= image_tag @driver.image_url.to_s %>
+      <div class="name"><%= @driver.abbreviation %></div>
+
+</p>
+
+
+

@@ -1,0 +1,10 @@
+<% content_for :functional_nav do%>
+<li><%= link_to 'Back', teams_path %></li>
+<% end %>
+<%= currently_at 'Teams'%>
+
+<h1>New team</h1>
+
+<%= render 'form' %>
+
+

@@ -1,0 +1,42 @@
+<% content_for :functional_nav do%>
+<li><%= link_to 'Add', new_result_path %></li>
+<% end %>
+<%= currently_at 'Results'%>
+
+<h1>Listing results</h1>
+<table id="results">
+<thead>	
+  <tr>
+    <th>Country</th>  
+    <th>City</th>    	
+    <th>Pos</th>
+    <th>No</th>
+    <th>Driver</th>    
+    <th>Team</th>       
+    <th>Grid</th>
+    <th>Pts</th>
+    <th>Image</th>    
+  </tr>
+</thead>
+<tbody>
+<% @results.each do |result| %>
+  <tr>
+    <td class="hifont"><%= result.race.country %></td>   
+    <td class="hifont"><%= result.race.city %></td>       
+    <td class="hifont"><%= link_to(result.position, result) %></td>
+    <td class="hifont"><%= result.driver.number %></td>
+    <td class="hifont"><%= result.driver.first_name + ' ' +    
+            result.driver.last_name %></td> 
+    <td class="hifont"><%= result.driver.team.name %></td>    
+       
+    <td class="hifont"><%= result.grid %></td>
+    <td class="hifont"><%= result.points %></td>
+    <td><img width="40" height="60" <%= image_tag result.driver.image_url.to_s %></td>    
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+

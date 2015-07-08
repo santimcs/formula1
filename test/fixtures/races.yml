@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  country: MyString
+  city: MyString
+  name: MyString
+  from_date: 2013-03-17
+  to_date: 2013-03-17
+  circuit: MyString
+  laps: 1
+  length: 1.5
+  distance: 1.5
+  image: MyString
+
+two:
+  country: MyString
+  city: MyString
+  name: MyString
+  from_date: 2013-03-17
+  to_date: 2013-03-17
+  circuit: MyString
+  laps: 1
+  length: 1.5
+  distance: 1.5
+  image: MyString

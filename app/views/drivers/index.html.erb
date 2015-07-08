@@ -1,0 +1,42 @@
+<% content_for :functional_nav do%>
+<li><%= link_to 'Add', new_driver_path %></li>
+<% end %>
+<%= currently_at 'Drivers'%>
+
+<h1>Listing drivers</h1>
+
+<table id="drivers">
+	<thead>
+  <tr>
+    <th>No.</th>
+
+    <th>Name</th>
+    <th>Abb</th>
+
+    <th>Age</th>      
+    <th>Nationality</th>
+    <th>Team</th>
+    <th>Points</th>
+    <th>Image</th>
+  </tr>
+</thead>
+<tbody>
+<% @drivers.each do |driver| %>
+  <tr>
+    <td class="hifont"><%= driver.number %></td>
+    <td class="hifont"><%= link_to(driver.first_name + ' ' + driver.last_name, driver) %></td>
+    <td class="hifont"><%= driver.abbreviation %></td>
+
+	<td class="hifont"><%= BirthdateToAge(driver.birthdate) %></td>    
+    <td class="hifont"><%= driver.nationality %></td>
+    <td class="hifont"><%= driver.team.name %></td>
+    <td class="hifont"><%= driver.points %></td>
+    <td><img width="128" height="128" <%= image_tag driver.image_url.to_s %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+

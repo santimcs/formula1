@@ -1,0 +1,53 @@
+<% content_for :functional_nav do%>
+<li><%= link_to 'Add', new_result_path %></li>
+<li><%= link_to 'Edit', edit_result_path(@result) %></li>
+<li><%= link_to 'Delete', @result, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+<li><%= link_to 'Back', results_path %></li>
+<% end %>
+<%= currently_at 'Results'%>
+
+<p>
+  <b>Country:</b>
+  <%= @result.race.country %>
+</p>
+<p>
+  <b>Race:</b>
+  <%= @result.race.name %>
+</p>
+<p>
+  <b>Position:</b>
+  <%= @result.position %>
+</p>
+
+<p>
+  <b>No:</b>
+  <%= @result.driver.number %>
+</p>
+<p>
+  <b>Driver:</b>
+  <%= @result.driver.first_name + ' ' + @result.driver.last_name %>
+</p>
+<p>
+  <b>Team:</b>
+  <%= @result.driver.team.full_name %>
+</p>
+<p>
+  <b>Laps:</b>
+  <%= @result.race.laps %>
+</p>
+<p>
+  <b>Grid:</b>
+  <%= @result.grid %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @result.points %>
+</p>
+
+<p>
+
+     <%= image_tag @result.driver.image_url.to_s %>
+      <div class="name"><%= @result.driver.abbreviation %></div>
+</p>
+

@@ -1,0 +1,76 @@
+<% content_for :sidebar do %>
+	<section id="functional_nav">
+		<header>
+			<h4 align="center">Drivers</h4>
+		</header>
+		<ul>
+			<% @team.drivers.each do |p| %>
+			<li><%= link_to ('%2d' % p.number)+' '+p.first_name+' '+p.last_name, p %></li>
+			<li><%= image_tag p.image_url.to_s, height: '160', width: '160' %></li>			
+			<% end %>	
+
+		</ul>
+	</section>
+<% end %>
+
+<% content_for :functional_nav do%>
+<li><%= link_to 'Add', new_team_path %></li>
+<li><%= link_to 'Edit', edit_team_path(@team) %></li>
+<li><%= link_to 'Back', teams_path %></li>
+<% end %>
+<%= currently_at 'Teams'%>
+
+
+<p>
+  <b>Name:</b>
+  <%= @team.name %>
+</p>
+
+<p>
+  <b>Full name:</b>
+  <%= @team.full_name %>
+</p>
+
+<p>
+  <b>Base:</b>
+  <%= @team.base %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @team.country %>
+</p>
+
+<p>
+  <b>Team principal:</b>
+  <%= @team.team_principal %>
+</p>
+
+<p>
+  <b>Technical chief:</b>
+  <%= @team.technical_chief %>
+</p>
+
+<p>
+  <b>Chassis:</b>
+  <%= @team.chassis %>
+</p>
+
+<p>
+  <b>Engine:</b>
+  <%= @team.engine %>
+</p>
+<p>
+  <b>Points:</b>
+  <%= @team.points %>
+</p>
+<p>
+
+   
+      <%= image_tag @team.image_url.to_s %>
+      <div class="name"><%= @team.name %></div>
+
+</p>
+
+
+

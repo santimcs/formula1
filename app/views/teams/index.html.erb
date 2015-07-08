@@ -1,0 +1,43 @@
+<% content_for :functional_nav do%>
+<li><%= link_to 'Add', new_team_path %></li>
+<% end %>
+<%= currently_at 'Teams'%>
+
+<h1>Listing teams</h1>
+
+<table id="teams" class="display">
+<thead>	
+  <tr>
+  	<th>No</th>
+    <th>Name</th>
+    <th>Full name</th>
+    <th>Base</th>
+    <th>Country</th>
+    <th>Team principal</th>
+    <th>Technical chief</th>
+    <th>Chassis</th>
+    <th>Engine</th>
+    <th>Points</th>    
+  </tr>
+</thead>
+<tbody>
+<% @teams.each do |team| %>
+  <tr>
+  	<td><%= team.id %></td>
+    <td><%= link_to(team.name, team) %></td>
+    <td><%= team.full_name %></td>
+    <td><%= team.base %></td>
+    <td><%= team.country %></td>
+    <td><%= team.team_principal %></td>
+    <td><%= team.technical_chief %></td>
+    <td><%= team.chassis %></td>
+    <td><%= team.engine %></td>
+    <td><%= team.points %></td>    
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+

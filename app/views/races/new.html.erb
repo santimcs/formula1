@@ -1,0 +1,9 @@
+<% content_for :functional_nav do%>
+	<li><%= link_to 'Back', races_path %></li>
+<% end %>
+<%= currently_at 'Races'%>
+<h1>New race</h1>
+
+<%= render 'form' %>
+
+

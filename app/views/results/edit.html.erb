@@ -1,0 +1,11 @@
+<% content_for :functional_nav do%>
+<li><%= link_to 'Show', @result %></li>
+<li><%= link_to 'Back', results_path %></li>
+<% end %>
+<%= currently_at 'Results'%>
+
+<h1>Editing result</h1>
+
+<%= render 'form' %>
+
+
